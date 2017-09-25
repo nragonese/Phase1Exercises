@@ -121,9 +121,11 @@ transmute(hourmin,minpastmid = (hour*60)+minute)
 a.	First it adds the matrix with both, then only the 2nd matrixes number
 
 Exercises 5.6.7
-
 Exercises 7.3.4
-
+1)	X is height. Y,Z are measurements across
+2)	There’s a massive gap in count at ~2,000
+3)	21, 1600
 Exercises 7.4.1
 1)	Histogram they’re not included, bar chart they’re marked as 0s.
 2)	Allows the functions to run by removing nulls
+
