@@ -1,2 +1,15 @@
 Exercises 10.5.1-6
 
+1)	When you print a tibble it only shows the first 10 rows and a column header
+2)	Df$x function doesn’t return a value as a tibble. Tibble gives you the header and the values for df[, "xyz"]. Tibbles give you the type of value.
+3)	mt_tib[var]
+4)	annoying table
+
+1.	annoying$`1`
+2.	annoying %>% ggplot(aes(`1`, `2`)) +geom_point()
+3.	annoying %>% mutate(`3` = `2` / `1`)
+4.	annoying %>% rename(one = `1`, two = `2`,three = `3`)
+
+5)	converts named atomic vectors or lists to two columned data frames
+6)	options(tibble.width )
+
