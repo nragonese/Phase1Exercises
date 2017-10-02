@@ -1,15 +1,43 @@
 Exercises 10.5.1-6
-
 1)	When you print a tibble it only shows the first 10 rows and a column header
 2)	Df$x function doesn’t return a value as a tibble. Tibble gives you the header and the values for df[, "xyz"]. Tibbles give you the type of value.
 3)	mt_tib[var]
-4)	annoying table
 
+4)	annoying table
 1.	annoying$`1`
 2.	annoying %>% ggplot(aes(`1`, `2`)) +geom_point()
 3.	annoying %>% mutate(`3` = `2` / `1`)
 4.	annoying %>% rename(one = `1`, two = `2`,three = `3`)
-
 5)	converts named atomic vectors or lists to two columned data frames
 6)	options(tibble.width )
+
+Exercise 11.2.1
+1)	read_delim()
+2)	?read_csv has the entire list
+3)	read_fwf(file, col_positions, col_types = NULL, locale = default_locale(),na = c("", "NA"), comment = "", skip = 0, n_max = Inf,  guess_max = min(n_max, 1000), progress = show_progress())
+4)	read_delim(x, ",", quote = "'")
+
+5)	csv errors
+a.	it only names 2 columns but there are 3 columns of data
+b.	there are more column names than data points for the columns
+c.	it’s missing a closing quote
+d.	it’s called ab instead of a and b as 2 columns
+e.	need to use read_csv2 because of the ;
+
+Exercises 11.3.5
+1.	locale(date_names = "en", date_format = "%AD", time_format = "%AT")
+2.	whichever is set to a , the other will be set to a period for decimal mark and grouping mark
+3.	they give you a default for date and time formatting date_format(format = "%Y-%m-%d", tz = "UTC")
+4.	in the US
+5.	read_csv is for , as the deliminator read_csv2 is for ; as the deliminator
+6.	https://en.wikipedia.org/wiki/Character_encoding
+
+7.	Parsing
+1)	Parse_date(“January 1,2010”, “%B %d,%Y”)
+2)	Parse_date(“2015-Mar-07”, “%Y-%b-%d”)
+3)	Parse_date(“06-Jun-2017”, “%d-%b-%Y”)
+4)	Parse_date(“c("August 19 (2015)", "July 1 (2015)") “,“%B %d (%Y)”, “%B %d (%Y)”)
+5)	Parse_date(“12/30/14” “%m/%d/%y”)
+6)	Parse_time(“1705”, ”%H”%M)
+7)	Parse_time(“11:15:10.12 PM”, “%I:%M:%OS %p”)
 
