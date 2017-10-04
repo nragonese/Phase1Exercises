@@ -6,3 +6,18 @@ table 3: country and year still have their own columns and although there's only
 talbe 4: the two variables are in two different tables. the variable year is also broken out amongst two columns.
 
 2)
+cases <- filter(table2, type == "cases")
+
+population <- filter(table2, type == "population")
+
+new<- join(cases,popoulation, type = "left", match = "all")
+
+mutate(rate = cases / population * 10000)
+
+4a and 4b are easier in this case because they already have the step of creating 2 seperate tables with cases and populaton.
+
+3) same start as to 2) then plot the data:
+
+ggplot(new, aes(year, cases)) + 
+  geom_line(aes(group = country), colour = "grey50") + 
+  geom_point(aes(colour = country))
