@@ -1,0 +1,8 @@
+12.2.1 Exercises
+
+1) Table 1: each column indicates a variable defined by the header. each row is a unique observaton. 
+table 2 : country and year each have their own column, but the type column contains contains multiple variables.
+table 3: country and year still have their own columns and although there's only one column for rate, it would be more useful if rate were broken up into it's two components.
+talbe 4: the two variables are in two different tables. the variable year is also broken out amongst two columns.
+
+2)
