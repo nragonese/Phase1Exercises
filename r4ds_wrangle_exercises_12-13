@@ -29,3 +29,5 @@ ggplot(new, aes(year, cases)) +
 2) need brackets around the dates.
 
 3) There's two different ages for Phillip Woods. We need a way to uniquely identify them.
+
+4) gather(preg,"male","female",key = "sex",value = "age")
