@@ -21,3 +21,11 @@ mutate(rate = cases / population * 10000)
 ggplot(new, aes(year, cases)) + 
   geom_line(aes(group = country), colour = "grey50") + 
   geom_point(aes(colour = country))
+
+12.3.3 Exercises
+
+1) when you spread, you've created new variables with each of the years.
+
+2) need brackets around the dates.
+
+3) There's two different ages for Phillip Woods. We need a way to uniquely identify them.
