@@ -31,3 +31,11 @@ ggplot(new, aes(year, cases)) +
 3) There's two different ages for Phillip Woods. We need a way to uniquely identify them.
 
 4) gather(preg,"male","female",key = "sex",value = "age")
+
+12.4.3 Exercises
+
+1)If sep is a character vector, this controls what happens when there are too many pieces. If sep is a character vector, this controls what happens when there are not enough pieces.
+
+2) If TRUE, remove input columns from output data frame. use false if you want to keep source data.
+
+3) you can choose to seperate into as many groups as possible then unite them from there. 
