@@ -45,3 +45,23 @@ ggplot(new, aes(year, cases)) +
 1) fill requires explicit missing values to work. complete makes all implicitly missing values explicit.
 
 2) Down takes the bottom value.
+
+12.6.1 Exerecises
+
+1) this is resasonable becuase there are 0s so youre not ignoring confirmed counts of 0 as unavailable data.
+
+2) the seperate steps wouldn't work because the _ is consistent among the entries.
+
+3) 
+distinct(who3,"country")
+distinct(who3,"iso2")
+distinct(who3,"iso3")
+
+4)
+who5 %>%
+  group_by(country, year, sex) %>%
+  filter(year > 1995) %>%
+  summarise(cases = sum(cases)) %>%
+  unite(country_sex, country, sex, remove = FALSE) %>%
+  ggplot(aes(x = year, y = cases, group = country_sex, colour = sex)) +
+  geom_line()
