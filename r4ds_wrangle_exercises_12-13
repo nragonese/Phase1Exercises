@@ -75,3 +75,15 @@ who5 %>%
 3) destination
 
 4) a holliday key that's binary 1,0
+
+13.3.1 Exercises
+
+1) flights %>% mutate(flightkey = row_number())
+
+2) keys
+  1) playerID, year, stint
+  2) name, sex, year
+  3) lat, long, year, month
+  4) id
+  5) no idea
+3)
