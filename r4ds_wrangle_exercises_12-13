@@ -65,3 +65,13 @@ who5 %>%
   unite(country_sex, country, sex, remove = FALSE) %>%
   ggplot(aes(x = year, y = cases, group = country_sex, colour = sex)) +
   geom_line()
+
+13.2.1 Exercises
+
+1) flights and airports tables. latiude, longitutde.
+
+2) origin links to name in airports and weather. may need to mutate name to get them to join.
+
+3) destination
+
+4) a holliday key that's binary 1,0
