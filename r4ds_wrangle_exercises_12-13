@@ -38,4 +38,10 @@ ggplot(new, aes(year, cases)) +
 
 2) If TRUE, remove input columns from output data frame. use false if you want to keep source data.
 
-3) you can choose to seperate into as many groups as possible then unite them from there. 
+3) you can choose to seperate into as many groups as possible then unite them from there.
+
+12.5.1 Exercises
+
+1) fill requires explicit missing values to work. complete makes all implicitly missing values explicit.
+
+2) Down takes the bottom value.
