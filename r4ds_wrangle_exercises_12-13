@@ -135,3 +135,28 @@ flightweather %>%
     
    13.5.1 Exercises
    
+1) not all of the airlines have tail numbers.
+
+2)
+  filter(flights) %>%
+  group_by(tailnum) %>%
+  count() %>%
+  filter(n > 100)
+
+flights %>%
+  semi_join(planes_gt100, by = "tailnum")
+  
+  3) fueleconomy::vehicles %>%
+  semi_join(fueleconomy::common, by = c("make", "model"))
+  
+  4)
+  
+  5)flights that are within the FAA vs smaller airports.
+  
+  6)
+  flights %>%
+  group_by(tailnum, carrier) %>%
+  count() %>%
+  filter(n() > 1) %>%
+  select(tailnum) %>%
+  distinct()
