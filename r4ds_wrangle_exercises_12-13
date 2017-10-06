@@ -87,7 +87,9 @@ who5 %>%
   4) id
   5) no idea
 
-3) avg_delay <-
+13.4.6 Exercises
+
+1) avg_delay <-
 flights %>%
   group_by(dest) %>%
   
@@ -101,4 +103,35 @@ avg_delay %>%
   geom_point()+
   coord_quickmap()
   
+  2)
+flights %>%
+  left_join(airports, by = c(dest = "faa")) %>%
+  left_join(airports, by = c(origin = "faa"))
+  
+  3)
+  flights %>%
+  left_join(plane_ages, by = "tailnum") %>%
+  group_by(age) %>%
+  filter(!is.na(dep_delay)) %>%
+  summarise(delay = mean(dep_delay)) %>%
+  ggplot(aes(x = age, y = delay)) +
+  geom_point() +
+  geom_line()
+  
   4)
+flightweather <-
+  flights %>%
+  inner_join(weather, by = c("origin" = "origin",
+                            "year" = "year",
+                            "month" = "month",
+                            "day" = "day",
+                            "hour" = "hour"))
+
+flightweather %>%
+  group_by(precip) %>%
+  summarise(delay = mean(dep_delay, na.rm = TRUE)) %>%
+  ggplot(aes(x = precip, y = delay)) +
+    geom_line() + geom_point() 
+    
+   13.5.1 Exercises
+   
