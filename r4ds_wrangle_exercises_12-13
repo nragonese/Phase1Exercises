@@ -86,3 +86,19 @@ who5 %>%
   3) lat, long, year, month
   4) id
   5) no idea
+
+3) avg_delay <-
+flights %>%
+  group_by(dest) %>%
+  
+  summarise(delay = mean(arr_delay, na.rm = TRUE)) %>%
+  inner_join(airports, by = c(dest = "faa")) %>% print
+
+
+avg_delay %>% 
+  ggplot(aes(lon, lat, color = delay))+
+  borders("state")+
+  geom_point()+
+  coord_quickmap()
+  
+  4)
