@@ -1,0 +1,15 @@
+14.2.5 Exercises
+
+1) paste0 automatically assumes you're using "" as the seperator. as.character is the same function. paste coerces NA characters
+
+2) collapse puts them into a single string with quotes around all parts of the string. Sep puts them as separate strings with quotes around each.
+
+3)  string1 <- "string"
+str_length(string1) #6
+str_sub(string1,3,4)
+
+you have to either take both, pick one, or do a mean function
+
+4) determines how many characters until the text should wrap. Could be useful for lists and other formatting.
+
+5)
