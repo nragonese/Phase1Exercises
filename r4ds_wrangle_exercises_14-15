@@ -10,6 +10,7 @@ str_sub(string1,3,4)
 
 you have to either take both, pick one, or do a mean function
 
-4) determines how many characters until the text should wrap. Could be useful for lists and other formatting. str_pad is the opposite which adds characters.
+4) determines how many characters until the text should wrap. Could be useful for lists and other formatting.
 
-5)
+5) removes blank characters before or after the string. Str_pad is the opposite.
+
