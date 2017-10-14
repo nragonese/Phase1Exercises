@@ -85,3 +85,43 @@ str_split(x, ", +(and +)?")
 2) words could be seperated by commas.
 
 3) it splits all characters.
+
+15.4.1 Exercises
+
+1) summary(gss_cat[["tvhours"]]). Median may be a better measure to avoid the outliers.
+
+2) age, TV hours, year, and income are principled.
+
+3)  it makes NA equal to a value of one.
+
+15.5.1 Exercises 
+
+1)
+gss_cat %>% 
+    mutate(partyid = 
+               fct_collapse(partyid,
+                            other = c("No answer", "Don't know", "Other party"),
+                            rep = c("Strong republican", "Not str republican"),
+                            ind = c("Ind,near rep", "Independent", "Ind,near dem"),
+                            dem = c("Not str democrat", "Strong democrat"))) %>%
+    count(year, partyid)  %>%
+    group_by(year) %>%
+    mutate(p = n / sum(n)) %>%
+    ggplot(aes(x = year, y = p,
+               color = fct_reorder2(partyid, year, p))) +
+    geom_point() +
+    geom_line()
+    
+    2)
+gss_cat %>%
++     mutate(rincome = 
++                fct_collapse(
++                    rincome,
++                    `NA` = c("No answer", "Don't know", "Refused", "Not applicable"),
++                    `under $5000` = c("Lt $1000", str_c("$", c("1000", "3000", "4000"),
++                                                     " to ", c("2999", "3999", "4999"))),
++                    `$5000 to 10000` = str_c("$", c("5000", "6000", "7000", "8000"),
++                                             " to ", c("5999", "6999", "7999", "9999"))
++                )) %>%
++     ggplot(aes(x = rincome)) +
++     geom_bar() 
