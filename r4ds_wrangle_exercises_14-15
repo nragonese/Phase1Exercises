@@ -23,7 +23,7 @@ you have to either take both, pick one, or do a mean function
 
 3) .[any character].[any character].[any character]
 
-13.4.2.1 Exercises
+14.3.2.1 Exercises
 
 1) str_view(x, "$\^^$")
 
@@ -32,3 +32,20 @@ str_view(X,"^y")
 str_view(X,"x$")
 str_view(X,"^...$")
 str_view(X,"^.......")
+
+14.3.3.1 Exercises
+
+1) str_view(X,"^[aeiou]", match = TRUE)
+str_view(X,"^[^aeiou]+$", match = TRUE)
+str_view(X, "[^e]ed$", match = TRUE)
+str_view(X,"ing|ise$", match = TRUE)
+
+2) str_view(X,"ie|cei", match = TRUE)
+
+3) str_view(X,"q^u", match = TRUE) no results so yes
+
+4) str_view(X,"our$", match = TRUE) doesn't work for hour though
+
+5) str_view("999-111-2222","...-...-....", match = TRUE)
+
+14.4.2 Exercises
