@@ -78,3 +78,10 @@ vowels <- str_count(words, "[aeiou]")/str_length(words)
 words[vowels == max(vowels)]
 
 14.4.6.1 Exercises
+
+1)x <- c("apples, pears, and bananas")
+str_split(x, ", +(and +)?")
+
+2) words could be seperated by commas.
+
+3) it splits all characters.
