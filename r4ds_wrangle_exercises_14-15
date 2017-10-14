@@ -14,3 +14,21 @@ you have to either take both, pick one, or do a mean function
 
 5) removes blank characters before or after the string. Str_pad is the opposite.
 
+
+14.3.1.1 Exercises
+
+1) \ is just saying escape but nothing to escape. \\ just says escape the backslash, but then has nothing to look for. I didn't follow the logic of why you need 4 blackslashes instead of 3.
+
+2) str_view(x, "\"\'\\\\")
+
+3) .[any character].[any character].[any character]
+
+13.4.2.1 Exercises
+
+1) str_view(x, "$\^^$")
+
+2)  X <- c(stringr::words)
+str_view(X,"^y")
+str_view(X,"x$")
+str_view(X,"^...$")
+str_view(X,"^.......")
