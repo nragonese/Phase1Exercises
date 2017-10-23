@@ -1,4 +1,4 @@
-16.2.4 Exercises
+### 16.2.4 Exercises
 
 1) you get a failed to parse error message.
 
@@ -11,7 +11,7 @@
   d4 - mdy(d4)
   d5 - mdy(d5)
   
-16.3.4 Exercises
+### 16.3.4 Exercises
 
 1)
 flights_dt %>%
