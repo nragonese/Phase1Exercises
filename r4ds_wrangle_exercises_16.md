@@ -52,5 +52,8 @@ flights_dt %>%
   Saturday has the lowest average departure delay.
   
 6)
-
+ggplot(diamonds, aes(x = carat)) + 
+  geom_density()
+  
+Both have an abnormal distribution towards whole numbers, liekly due to human preference in scheduling/ diamond creation.
 
