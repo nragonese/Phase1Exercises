@@ -38,6 +38,19 @@ flights_dt %>%
   group_by(sched_dep_hour) %>%
   summarise(dep_delay = mean(dep_delay)) %>%
   ggplot(aes(y = dep_delay, x = sched_dep_hour)) +
-  geom_point() +
   geom_smooth()
+  
+5)
+  
+flights_dt %>%
+  mutate(day = wday(sched_dep_time, label = TRUE)) %>%
+  group_by(day) %>%
+  summarise(dep_delay = mean(dep_delay)) %>%
+  ggplot(aes(y = dep_delay, x = day)) +
+  geom_point()
+  
+  Saturday has the lowest average departure delay.
+  
+6)
+
 
