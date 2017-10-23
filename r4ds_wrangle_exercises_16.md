@@ -33,5 +33,11 @@ flights_dt %>%
   select(origin,dest,air_time2,dep_time,arr_time,air_time, delta)
   
 4)
-
+flights_dt %>%
+  mutate(sched_dep_hour = hour(sched_dep_time)) %>%
+  group_by(sched_dep_hour) %>%
+  summarise(dep_delay = mean(dep_delay)) %>%
+  ggplot(aes(y = dep_delay, x = sched_dep_hour)) +
+  geom_point() +
+  geom_smooth()
 
