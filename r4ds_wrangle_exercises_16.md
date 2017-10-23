@@ -68,4 +68,19 @@ flights_dt %>%
 
 ### 16.4.5 Exercises
 
-1)
+1) months in seconds don't change
+
+2) it's used for time differences when the day changes.
+
+3) 
+ymd("2015-01-01") + months(0:11)
+floor_date(today(), unit = "year") + months(0:11)
+
+4)
+age <- function(bday) {
+    (bday %--% today()) %/% years(1)
+}
+age(ymd("1993-03-29"))
+
+5) I have no idea what the goal of that function was, but it gives you 12.
+
