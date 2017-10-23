@@ -57,3 +57,13 @@ ggplot(diamonds, aes(x = carat)) +
   
 Both have an abnormal distribution towards whole numbers, liekly due to human preference in scheduling/ diamond creation.
 
+7)
+flights_dt %>%
+  mutate(early = dep_delay < 0,
+         minute = minute(sched_dep_time) %% 10) %>%
+  group_by(minute) %>%
+  summarise(early = mean(early)) %>%
+  ggplot(aes(x = minute, y = early)) +
+  geom_point()
+
+
