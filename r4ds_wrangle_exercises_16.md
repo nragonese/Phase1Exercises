@@ -66,4 +66,6 @@ flights_dt %>%
   ggplot(aes(x = minute, y = early)) +
   geom_point()
 
+### 16.4.5 Exercises
 
+1)
