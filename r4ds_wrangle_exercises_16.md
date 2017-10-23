@@ -26,5 +26,12 @@ flights_dt %>%
   filter(dep_time2 != dep_time) %>%
   select(dep_time2, dep_time, sched_dep_time, dep_delay)
  
- 3)
- 
+3) 
+flights_dt %>%
+  mutate(air_time2 = arr_time - dep_time, delta = air_time - air_time2) %>%
+  filter(air_time2 != air_time) %>%
+  select(origin,dest,air_time2,dep_time,arr_time,air_time, delta)
+  
+4)
+
+
