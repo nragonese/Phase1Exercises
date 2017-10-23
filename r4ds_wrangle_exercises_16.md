@@ -14,3 +14,17 @@
 16.3.4 Exercises
 
 1)
+flights_dt %>%
+  mutate(time = hour(dep_time)*60 +minute(dep_time),
+         month = as.factor(month(dep_time))) %>%
+  ggplot(aes(x = time, group = month, color = month)) +
+  geom_freqpoly(binwidth = 100)
+
+2)
+flights_dt %>% 
+  mutate(dep_time2 = sched_dep_time + dep_delay*60) %>%
+  filter(dep_time2 != dep_time) %>%
+  select(dep_time2, dep_time, sched_dep_time, dep_delay)
+ 
+ 3)
+ 
