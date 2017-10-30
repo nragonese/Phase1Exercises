@@ -30,3 +30,15 @@ output: word_document
 * Paid Search Associate - Red Ventures
 
 2)
+A footnote [^1]
+[^1]: Here is the footnote.
+
+*** Horitzontal Rule
+
+> block quote 
+
+3) No Output
+
+### 27.4.7 Exercises
+
+1)
