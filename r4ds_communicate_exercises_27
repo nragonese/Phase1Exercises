@@ -42,3 +42,10 @@ A footnote [^1]
 ### 27.4.7 Exercises
 
 1)
+knitr::opts_chunk$set(
+  echo = FALSE
+)
+
+2) No Output
+
+3) No Output
