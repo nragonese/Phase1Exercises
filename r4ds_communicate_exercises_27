@@ -10,3 +10,23 @@
 
 ### 27.3.1 Exercises
 
+1)
+---
+title: "CV"
+author: "nragonese"
+date: "October 30, 2017"
+output: word_document
+---
+
+#Nick Ragonese
+
+##Education
+* St John's Prep High School
+* Wake Forest University
+
+
+##Job Expereience
+* Sales Operations Associate - Red Ventures
+* Paid Search Associate - Red Ventures
+
+2)
