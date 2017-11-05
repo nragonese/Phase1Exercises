@@ -1,0 +1,29 @@
+### Exercises 28.2.1
+
+1)
+ggplot(mpg, aes(displ, hwy)) +
+    geom_point(aes(colour = class)) +
+    geom_smooth(se = FALSE) +
+    labs(
+        title = "Fuel efficiency generally decreases with engine size",
+        subtitle = "Two seaters (sports cars) are an exception because of their light weight",
+        caption = "Data from fueleconomy.gov",
+        x = "Engine displacement (L)",
+        y = "Highway fuel economy (mpg)",
+        colour = "Car type"
+    )
+    
+    2)
+    ggplot(mpg, aes(displ, hwy)) +
+    geom_point(aes(colour = class)) +
+    geom_smooth(se = FALSE, method = "lm") +
+    labs(
+        title = "Fuel efficiency generally decreases with engine size",
+        subtitle = "Two seaters (sports cars) are an exception because of their light weight",
+        caption = "Data from fueleconomy.gov",
+        x = "Engine displacement (L)",
+        y = "Highway fuel economy (mpg)",
+        colour = "Car type"
+    )
+    
+    3)
