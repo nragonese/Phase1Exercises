@@ -27,3 +27,10 @@ ggplot(mpg, aes(displ, hwy)) +
     )
     
     3)
+ ggplot(diamonds, aes(x = carat)) + geom_density()+
++     labs(
++         title = "The Number of Diamonds Generally decrease with an increase in carat",
++         subtitle = "there are spikes at whole numbers due to human preferance",
++         x = "Count"
+
+### Exercises 28.3.1
