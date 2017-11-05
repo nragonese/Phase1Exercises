@@ -34,3 +34,42 @@ ggplot(mpg, aes(displ, hwy)) +
 +         x = "Count"
 
 ### Exercises 28.3.1
+
+1)
+corners <- tibble(x = c(0,1),
+                  y = c(0,1))
+ggplot(corners, aes(x,y)) +
+    geom_text(label = "bot_right", x = Inf, y = -Inf) +
+    geom_text(label = "top_right", x = Inf, y = Inf) +
+    geom_text(label = "bot_left", x = -Inf, y = -Inf) +
+    geom_text(label = "top_left", x = -Inf, y = Inf)
+    
+2)
+ggplot(mpg, aes(displ, hwy)) +
+    geom_point() +
+    annotate("text",x = 6, y = 40, label = "label")
+    
+3)
+mpg2 <- mpg %>% group_by(cyl) %>% mutate(avg_cty = round(mean(cty),1))
+ggplot(data = mpg2, aes(cty, hwy)) +
+    geom_point() +
+    geom_text(aes(label = avg_cty), y = 45, x = 10) +
+    facet_grid(~cyl)
+
+It automatically applies to all facets, I tried for an hour but couldn't get it to filter for a specific facet.
+
+4)
+use fill as a way to control the background box:
+
+mpg2 <- mpg %>% group_by(cyl) %>% mutate(avg_cty = round(mean(cty),1))
+ggplot(data = mpg2, aes(cty, hwy)) +
+    geom_point() +
+    geom_text(aes(label = avg_cty), y = 45, x = 10) +
+    geom_label(data = mpg2, aes(label = avg_cty, fill = as.factor(cyl), y = 45, x = 10))+
+    facet_grid(~cyl)
+    
+5) angle, length, ends, type
+
+### Exercises 28.4.4
+
+1)
